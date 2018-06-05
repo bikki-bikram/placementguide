@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Placement Guide:Add Record</title>
+  <link rel="icon" type="image/x-icon" href="static/logo.ico" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2><b><center><u>COMPANY BASIC DETAILS</u></center></b></h2></br>
+
+
+
+
+<form class="form-horizontal" action="/delete_company_details" method="POST"  enctype = "multipart/form-data">
+	<div class="dropdown">
+	    <button class="btn btn-primary dropdown-toggle" type="button" name="name" data-toggle="dropdown">
+	    <span class="caret"></span></button>
+	   	 <ul class="dropdown-menu">
+			{% for item in data2 %}
+			      <li><a>{{item[0]}}</a></li>
+			{% endfor %}
+	   	 </ul>
+	</div>
+
+    
+
+<div class="col-xs-offset-5 col-xs-10">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-success">Reset</button>
+    
+</form>
+</body>
+</html>

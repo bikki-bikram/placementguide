@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Placement Guide:Login</title>
+<link rel="icon" type="image/x-icon" href="static/logo.ico" />  
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="static/css1/font-awesome.min.css" rel="stylesheet">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+p{
+color:white;
+font-size:30px;
+}
+img{
+max-width:150%;
+height:100%
+}
+.container{
+width:800px;
+
+}
+
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #363636;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(120,110,110); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #7f7f7f;
+    margin: 1% auto 5% 69%; /* 5% from the top, 15% from the bottom and centered */
+    border: 10px solid #7f7f7f;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.h1{
+  color:"white";
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+.container1
+{
+  width:"60%";
+
+background-color: Wheat;
+}
+
+</style>
+</head>
+<body>
+<br><br>
+  
+
+<div class="container">
+  	 &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+
+<font face="Cooper Black"><h1><center><b>PLACEMENT GUIDE</b></center></h1></font>
+
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      <li data-target="#myCarousel" data-slide-to="1"></li>
+		      <li data-target="#myCarousel" data-slide-to="2"></li>
+                      <li data-target="#myCarousel" data-slide-to="3"></li>
+                     
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner">
+		      <div class="item active">
+		        <img src="static/set1.jpg" alt="Los Angeles" width="800" height="800">
+		      </div>
+
+		      <div class="item">
+		         <img src="static/set2.png" alt="Los Angeles" width="800" height="800">
+		      </div>
+    
+		      <div class="item">
+		         <img src="static/set3.jpg" alt="Los Angeles" width="800" height="800">
+		      </div>
+
+                      <div class="item">
+		         <img src="static/set4.png" alt="Los Angeles" width="800" height="800">
+		      </div>
+
+                      
+	     </div>
+
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+  </div>
+</div>
+
+
+
+
+</br></br></br>
+<div class="container1">
+	<div class="container-fluid w3-animate-zoom">
+		<div class="col-md-offset-9">
+			<div class="form-login">
+				<form action="/login", method="POST">
+					<font face="Cooper Black"><label for="uid"><h3>University ID:</h3></label></font>
+					<input type="text" class="form-control" id="uid" placeholder="enter university id" name="uid" required="required">
+					</br>
+					<font face="Cooper Black"><label for="pwd"><h3>Password:</h3></label></font>
+					<input type="password" class="form-control" id="pwd" placeholder="enter password" name="pwd" required="required">
+					</br>
+					
+					{% if error %}<p class=error><font size="3" color="red"> {{ error }} </font>{% endif %}  
+					</br>
+  					<font face="Cooper Black"><button type="submit" class="btn btn-info">LOGIN</button></font>
+  					<font face="Cooper Black"><button type="reset"  class="btn btn-default">RESET</button></font></br></br>
+				</form>
+				<font face="Cooper Black"><u>Not Registered?</u></font>&nbsp&nbsp&nbsp
+				<font face="Cooper Black"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">SIGN UP</button></font>
+				</br></br></br>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="id01" class="modal w3-animate-zoom">
+<script language=javascript>
+{% if error1 %}
+                                    alert("{{error1}}");
+{% endif %} 
+                                   </script> 
+	<form class="modal-content animate" action="/add_data" id="form" method="POST">
+        
+    		</br><font color="#220022">
+			      &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="name">Name:</label></font>
+     		              <input type="text" class="form-control" id="name" placeholder="enter name" name="name" required="required">
+
+                              &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="uid">University ID:</label></font>
+       			      <input type="text" class="form-control" id="uid" placeholder="enter university id" name="uid" required="required">
+
+  			      &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="pwd">New Password:</label></font>
+        		      <input type="password" class="form-control" id="pwd" placeholder="enter password" name="pwd" required="required">
+
+      			      &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="rpwd">Re-enter Password:</label></font>
+            		      <input type="password" class="form-control" id="rpwd" placeholder="re-enter password" name="rpwd" required="required">
+
+  			      &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="phno">Contact No:</label></font>
+        		      <input type="text" class="form-control" id="phno" placeholder="Enter Cont act No" name="phno" required="required">
+
+  			      &nbsp&nbsp&nbsp<font face="Cooper Black"><label for="email">E-mail:</label></font>
+      			      <input type="text" class="form-control" id="email" placeholder="enter E-mail id" name="email" required="required">
+			      </br></br>
+
+		<div class="form-group">
+			&nbsp&nbsp&nbsp<font face="Cooper Black"><label for="designation" class="control-label col-xs-3"><b>Destination:</b></label></font>
+	        	<div class="col-xs-5">
+				<font face="Cooper Black"><select class="form-control" name=destination><option>Student</option><option>Faculty</option></select></font>
+	        	</div>
+	       </div></br>
+		</font>
+		<div class="clearfix">
+  				&nbsp&nbsp&nbsp<font face="Cooper Black"><input type="submit" class="btn btn-info" value="Sign Up" ></font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  				&nbsp&nbsp&nbsp<font face="Cooper Black"><input type="reset"  class="btn btn-default" value="Reset"></font></br>
+    		</div>	
+       
+		</form>
+</div>
+
+
+<script >
+
+
+
+
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

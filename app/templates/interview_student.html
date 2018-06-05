@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Placement Guide:Company Details</title>
+<link rel="icon" type="image/x-icon" href="/static/logo.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+.success { background-color: white; }
+#myBtn:hover {
+  background-color: white;
+}
+
+  .jumbotron {
+      background-color: green;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 40px 0px;
+  }
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+
+h2 {
+      font-size: 18px;
+font face="Cooper Black";
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 500;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+</style>
+</head>
+<body>
+<div class="container">
+<div class="success">
+<header>		
+			<div class="navbar navbar-inverse">
+        <div class="navbar-brand">  <img src="/static/cu_logo.png " width="70%" height="230%"/>   </div></br>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            					<li ><a href="/homepage" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+								<li ><a><span class="glyphicon glyphicon-user"></span> {% for item in data %}<tr><td>{{item[0]}}</td>(<td>{{item[1]}}</td>)</tr>{% endfor %}</a></li>
+								<li ><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>LOG OUT</a></li>						
+			
+          </ul>
+        </div>
+      </div>
+	
+</header>
+<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+	 		<h2 class="navbar-text">{% for item in fn %}{{item}}{% endfor %}</h2>  
+    		</div>
+  		 <ul class="nav navbar-nav">
+			<li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}">About</a></li>
+		      <li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/question">Questions/Technical Round</a></li>
+		      <li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/group-discussion">Group Discussion Round</a></li>
+		      <li class="active"><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/interview-round">Interview Round</a></li>
+		  </ul>
+</nav>
+<div class=container>
+	<font face="Cooper Black"><h3><b>Share your experience with us:</b></h3></font>
+	<div class="media">
+	    <div class="media-left">
+	      <img src='/static/img_avatar1.png' class="media-object" style="width:60px">
+	    </div>
+	    <div class="media-body">
+    		<h4 class="media-heading">{% for item in data %}{{item[1]}}{% endfor %}	</h4>
+
+		<div class="container">
+			<form action="interview-round-upload" , method="post">
+				<form class="form-horizontal">
+					<div class="col-sm-10">
+        			<textarea class="form-control" type="text" id="data" placeholder="Type comment" name="data" rows="5"></textarea>
+			</div>
+</div>
+</div>
+</div>
+   			 </br> 
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    <button type="submit" class="btn btn-info">Post</button>
+	    </form>
+</div>
+<hr>
+
+<div class="container>
+<font face="Cooper Black"><h3><b>Recent Posts:</b></h3></font>
+
+
+
+		{% for item in data3 | reverse %}
+			<tr>
+			<div class="media">
+    				<div class="media-left">
+		      			<img src='/static/img_avatar1.png' class="media-object" style="width:60px">
+    				</div>
+				    <div class="media-body">
+	    				<h4 class="media-heading">
+					<td><b>{{item[3]}}</td> </br>
+		    			<td>{{item[2]}}</td>
+					</tr>
+				</div>
+		   </div>
+
+			</br>
+
+		{% endfor %}
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+<footer>		
+		<nav class="navbar navbar-inverse" role="navigation">
+				<div class="navigation">
+					
+					
+													
+							
+				
+
+		
+			     </div>
+		</nav>
+</footer> 
+
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

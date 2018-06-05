@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Placement Guide:Add Record</title>
+  <link rel="icon" type="image/x-icon" href="static/logo.ico" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2><b><center><u>COMPANY BASIC DETAILS</u></center></b></h2></br>
+<form class="form-horizontal" action="/company_details" method="POST"  enctype = "multipart/form-data">
+    <div class="form-group">
+
+
+        <label for="NAME" class="control-label col-xs-2"><b>NAME:</b></label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required">
+        </div>
+    </div></br>
+    <div class="form-group">
+
+
+        <label for="CGPA" class="control-label col-xs-2">CGPA:</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="cgpa" name="cgpa" placeholder="cgpa" required="required">
+        </div>
+    </div></br>
+    <div class="form-group">
+
+
+        <label for="10_MARKS" class="control-label col-xs-2">10_MARKS:</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="10_marks" name="10_marks" placeholder="10_marks" required="required">
+        </div>
+    </div></br>
+<div class="form-group">
+
+
+        <label for="12_MARKS" class="control-label col-xs-2">12_MARKS:</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="12_marks" name="12_marks" placeholder="12_marks" required="required">
+        </div>
+    </div></br>
+
+<div class="form-group">
+ <label for="PACKAGE" class="control-label col-xs-2">PACKAGE:</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="package" name="package" placeholder="package" required="required">
+        </div>
+    </div></br>
+<div class="form-group">
+
+
+        <label for="SPECIFIC SUBJECTS" class="control-label col-xs-2">SPECIFIC SUBJECTS:</label>
+        <div class="col-xs-8">
+            <input type="text" class="form-control" id="specific subjects" name="specific subjects" placeholder="specific subjects" required="required">
+        </div>
+    </div></br>
+<div class="form-group">
+
+        <label for="BACKLOGS" class="control-label col-xs-2">BACKLOGS:</label>
+        <div class="col-xs-3">
+           
+<select class="form-control" name="backlogs" ><option>0</option><option>1</option><option>2</option><option>3</option><option>>3</option></select>
+        </div>
+    </div></br>
+
+<div class="form-group">
+
+        <label for="GROUP DISCUSSIONS" class="control-label col-xs-2"><b>GROUP DISCUSSIONS:</b></label>
+        <div class="col-xs-3">
+<select class="form-control" name=grp-dicussion><option>Yes</option><option>No</option></select>
+        </div>
+    </div></br>
+ <p>UPLOAD IMAGES</p>
+         <input type = "file" name = "file" accept="image/*" multiple>
+
+<div class="col-xs-offset-5 col-xs-10">
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-success">Reset</button>
+    
+</form>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Placement Guide:Company Details</title>
+<link rel="icon" type="image/x-icon" href="/static/logo.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+
+.success { background-color: white; }
+
+h2 {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 500;
+      margin-bottom: 30px;
+  }
+    
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="success"> 
+	<header>		
+			<div class="navbar navbar-inverse">
+        <div class="navbar-brand">  <img src="/static/cu_logo.png " width="70%" height="230%"/>   </div></br>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            					<li ><a href="/homepage" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+								<li ><a><span class="glyphicon glyphicon-user"></span> {% for item in data %}<tr><td>{{item[0]}}</td>(<td>{{item[1]}}</td>)</tr>{% endfor %}</a></li>
+								<li ><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>LOG OUT</a></li>						
+			
+          </ul>
+        </div>
+      </div>
+	
+	</header>
+	
+	<nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+	 		<h2 class="navbar-text">{% for item in fn %}{{item}}{% endfor %}</h2>  
+    	</div>
+  		<ul class="nav navbar-nav">
+			<li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}">About</a></li>
+		      <li class="active"><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/question">Questions/Technical Round</a></li>
+		      <li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/group-discussion">Group Discussion Round</a></li>
+		      <li><a href="/company_data/{% for item in fn %}{{item}}{% endfor %}/interview-round">Interview Round</a></li>
+		</ul>
+	</nav>
+	
+
+		<form id="upload-form" action = "uploadques" method = "POST" enctype = "multipart/form-data">
+			
+			<p>&nbsp&nbsp&nbsp&nbsp&nbsp<b>Upload images</b></p>
+			
+			<div class="row">    
+				<div class="col-md-2 mb-2 col-md-offset-1">
+					<input type = "file" name = "file" accept="image/*" multiple>
+				 </div>
+				 <div class="col-md-2 mb-2 col-md-offset-1">
+					<input type = "submit" class="btn btn-info" value="Upload">
+				</div>
+			</div>
+		</form>
+			<br>
+		{% for item in data5 %}
+			<div class="gallery_product col-lg-2 col-md-2 col-sm-2 col-xs-4 filter hdpe">
+				<a target="_blank" href="http:/static/{{item[2]}}">
+					<img src="/static/{{item[2]}}" width="200" height="150" class="img-responsive" target="_self">
+				</a>
+				<p>Uploaded By:<td>{{item[3]}}</td></p> 
+		    </div>
+		{% endfor %}
+	
+</div>
+
+
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Placement Guide:Homepage</title>
+  <link rel="icon" type="image/x-icon" href="static/logo.ico" />  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+.well {
+    background-color: Wheat;
+    height:"80%";
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>		
+		
+		
+		<div class="navbar navbar-inverse">
+        <div class="navbar-brand">  <img src="/static/cu_logo.png " width="70%" height="230%"/>   </div></br>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            					<li ><a href="/homepage" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+								<li ><a><span class="glyphicon glyphicon-user"></span> {% for item in data %}<tr><td>{{item[0]}}</td>(<td>{{item[1]}}</td>)</tr>{% endfor %}</a></li>
+								<li ><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>LOG OUT</a></li>						
+			
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+
+		
+		
+<!--		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="navigation">
+						<div class="navbar-brand">
+							<img src="/static/cu_logo.png" width="70%" height="230%">
+							
+						</div>
+							</br>	
+							 <div class="navbar-collapse collapse">
+							<ul class="nav nav-tabs navbar-right" >
+								<li ><a href="/homepage" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+								<li ><a><span class="glyphicon glyphicon-user"></span> {% for item in data %}<tr><td>{{item[0]}}</td>(<td>{{item[1]}}</td>)</tr>{% endfor %}</a></li>
+								<li ><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>LOG OUT</a></li>&nbsp&nbsp&nbsp&nbsp						
+							</ul>
+				</div>
+			</br></br></br>
+		  </div>
+            </nav>
+-->
+</header> 
+<div class="well">
+                   
+
+
+	<h1><b><u><center> <font face="Cooper Black">Add New Record</font></u></center></b></h1></br>
+ 
+	<form action="/company_details" method="POST" >
+
+		
+		
+		<div class="row">    
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="NAME">NAME:</label></font></u>
+				<input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required">
+			 </div>
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				 <u><font face="Cooper Black"><label for="CGPA">CGPA:</label></font></u>
+				
+				<select class="form-control" name="cgpa" ><option>> 7.0 CGPA</option><option>Min 7.0</option><option>Min 8.0</option><option>Min 9.0</option></select>
+			</div>
+		</div>
+		
+		</br>
+	 	<div class="row">    
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="10_MARKS">10_PERCENTAGE:</label></font></u>
+				<select class="form-control" name="10_marks" ><option>Not Specific</option><option>Less than 70%</option><option>Minimum 70%</option><option>Minimum 80%</option><option>Minimum 90%</option></select>
+			</div>
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="12_MARKS">12_PERCENTAGE:</label></font></u>      
+				<select class="form-control" name="12_marks" ><option>Not Specific</option><option>Less than 70%</option><option>Minimum 70%</option><option>Minimum 80%</option><option>Minimum 90%</option></select>
+			</div>
+	      </div>
+		</br>
+
+		<div class="row">    
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="PACKAGE">PACKAGE:</label></font></u>
+				<select class="form-control" name="package" ><option>Less than 1 Lakh</option><option>1 Lakh</option><option>2 Lakh</option><option>3 Lakh</option><option>4 Lakh</option><option>5 Lakh</option><option>6 Lakh</option><option>7 Lakh</option><option>8 Lakh</option><option>9 Lakh</option><option>10 Lakh</option><option>More than 10 Lakh</option><option>More than 15 Lakh</option></select>	
+			</div>
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="SPECIFIC SUBJECTS">SPECIFIC SUBJECTS:</label></font></u>
+				<input type="text" class="form-control" id="specific subjects" name="specific subjects" placeholder="specific subjects" required="required">
+			
+				
+				
+				
+				
+				
+			
+			</div>
+		</div></br>
+   
+		<div class="row">    
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="BACKLOGS">BACKLOGS:</label></font></u>
+				<select class="form-control" name="backlogs" ><option>0</option><option>1</option><option>2</option><option>3</option><option>>3</option></select>
+			 </div>
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="GROUP DISCUSSIONS"><b>GROUP DISCUSSIONS:</b></label></font></u>
+				<select class="form-control" name=grp-dicussion><option>Yes</option><option>No</option></select>
+			</div>
+		</div>
+		</br>
+		<div class="row">
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="datevisted"><b>DATE VISITED:</b></label></font></u>
+				<input type="text" class="form-control" id="datevisted" name="datevisited" placeholder="datevisted" required="required">
+			 </div>
+			<div class="col-md-3 mb-3 col-md-offset-2">
+				<u><font face="Cooper Black"><label for="Profiledemanded"><b>PROFILE DEMANDED:</b></label></font></u>
+				<input type="text" class="form-control" id="Profiledemanded" name="profiledemanded" placeholder="Profiledemanded" required="required">
+			 </div>
+		</div>
+		</br>
+</div>
+	<div class="col-md-3 mb-3 col-md-offset-5">
+		    <button type="submit" class="btn btn-success">Submit</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		    <button type="reset" class="btn btn-success">Reset</button>
+	</div>  
+
+
+</form>
+
+</br>
+<hr>
+
+
+
+
+	<div class="container">
+	<h2><b><u><center><font face="Cooper Black">Recently Visited Companies In The Campus</font></u></center></b></h2></br>
+<center>
+
+		       	 </br>
+
+				{% for i in range(0,data3,) %}
+					<div class="row">
+
+					<div class="list-group">
+					  <b>  <a href="/company_data/{% for item in data2[i][0] %}{{item}}{% endfor %}" class="list-group-item list-group-item-success">{% for item in data2[i][0] %}<td>{{item}}</td>{% endfor %}<span class="badge">Visted On:{% for item in data2[i][1] %}<td>{{item}}</td>{% endfor %}</span>	
+
+
+					<form class='inline'  action="/delete_company_details" method="post">  
+<p align="right">					
+						<input type="hidden" name="del_com" value="{% for item in data2[i][0] %}{{item}}{% endfor %}" />
+						<button type="submit" ><span class="glyphicon glyphicon-trash" ></span></button>
+</p>				
+				</form>
+						</a></b>	
+					</div>					
+        	    
+					
+					</div>
+{% endfor %}
+
+</center>
+</div>
+
+	<hr>
+
+
+	<div class="container">
+		<h3><b><u><font face="Cooper Black">SHARE YOUR EXPERIENCE WITH US:</font></u></b></h3>
+			<div class="media">
+			    <div class="media-left">
+				      <img src='static/img_avatar1.png' class="media-object" style="width:60px">
+			    </div>
+		    <div class="media-body">
+		    	<h4 class="media-heading">
+				{% for item in data %}
+					<tr>
+			    		<td>{{item[1]}}</td>
+					</tr>
+				{% endfor %}
+			</h4>
+			<div class="container">
+				<form action="/comments" , method="post">
+			    		<form class="form-horizontal">
+      						<div class="col-sm-10">
+			        			<textarea class="form-control" type="text" id="data" placeholder="Type comment" name="data" rows="5"></textarea>
+						</div>
+			</div>
+		    </div>
+		    </br> 
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		    <button type="submit" class="btn btn-info">Post</button>
+			      </form>
+	</div>
+	<hr>
+	<h2><u><font face="Cooper Black">Earlier Posts:</font></u></h2>
+
+		{% for item in data1 | reverse %}
+			<tr>
+			<div class="media">
+    				<div class="media-left">
+		      			<img src='static/img_avatar1.png' class="media-object" style="width:60px">
+    				</div>
+				    <div class="media-body">
+	    				<h4 class="media-heading">
+					<td><b>{{item[2]}}</td> at <td>{{item[4]}}</b></td></br>				
+				
+
+				
+<form inline action="/delete_comment" method="post">           
+		<td>{{item[3]}}</td>			
+		<p align="right">
+		<input type="hidden" name="del" value="{{item[0]}}" />
+	         				<button type="submit"  ><span class="glyphicon glyphicon-trash" ></span></button>
+							</p>
+		</form>
+				
+		
+		    		
+				</div>
+		   </div>
+
+			</br>
+</tr>
+		{% endfor %}
+
+
+<footer>		
+		<nav class="navbar navbar-inverse" role="navigation">
+				<div class="navigation">
+					
+							
+				
+
+		
+			     </div>
+		</nav>
+</footer> 
+
+
+</div>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function ConfirmDelete(elem) {
+    localStorage.setItem('deleteId', $(elem).attr('data-id'));
+    $('#deleteModal').modal();
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
